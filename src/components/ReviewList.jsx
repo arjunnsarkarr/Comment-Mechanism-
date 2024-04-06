@@ -1,10 +1,17 @@
 import React from "react";
+import reviews from "../data/reviewsData.json";
+import CommentCards from "./CommentCards";
 
 const ReviewList = () => {
   return (
     <>
-      <div className="text-3xl font-bold underline text-purple-400">ReviewList
-      <h1>made by papa</h1></div>
+      
+
+      {
+      reviews.map((review, index) => {
+        return <CommentCards key={index} review={review} />
+      })
+      }
 
     </>
   );
